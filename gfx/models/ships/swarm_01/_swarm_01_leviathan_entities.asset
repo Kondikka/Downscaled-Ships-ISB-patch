@@ -1,0 +1,75 @@
+@leviathan_scale = 25
+
+# FRAME
+entity = {
+	name = "swarm_01_leviathan_entity"
+	pdxmesh = "empty_mesh"
+	
+	scale = 0.65
+	
+	locator = { name = "part1" }
+	locator = { name = "part2" }
+	locator = { name = "part3" }
+	locator = { name = "part4" }
+	locator = { name = "part5" }
+	
+	locator = { name = "part6"	position = { 0 0 0 } rotation = { 0 -90 0 } }
+	locator = { name = "part7"	position = { 90 0 0 } rotation = { 0 0 0 } }
+	locator = { name = "part8"	position = { -90 0 0 } rotation = { 0 0 0 } }
+	locator = { name = "part9"	position = { 0 70 15 } rotation = { 0 0 0 } }
+	attach = { part6 = "swarm_01_Flagship_main_entity" }
+	attach = { part7 = "swarm_flagship_support_entity" }
+	attach = { part8 = "swarm_flagship_support_entity" }
+	attach = { part9 = "swarm_flagship_baby_entity" }
+}
+
+entity = {
+	name = "swarm_01_leviathan_bow_entity"
+	pdxmesh = "empty_mesh"
+	
+	locator = { name = "large_gun_01" position = { 0 0 -35.75 } rotation = { 0 0 0 } }
+	locator = { name = "large_gun_02" position = { 0 22 -16.115 } rotation = { 0 0 0 } }
+	locator = { name = "large_gun_03" position = { 0 70 -7.5 } rotation = { 0 0 0 } }
+	locator = { name = "medium_gun_01" position = { -22 27.5 -12.1 } rotation = { 0 0 0 } }
+	locator = { name = "medium_gun_02" position = { 24.75 26 -9.76 } rotation = { 0 0 0 } }
+	locator = { name = "medium_gun_03" position = { -27.5 -22.41 -9.71 } rotation = { 0 0 0 } }
+	locator = { name = "medium_gun_04" position = { 27.5 -23.1 -9.25 } rotation = { 0 0 0 } }
+	locator = { name = "small_gun_01" position = { -38.72 0 -6.325 } rotation = { 0 0 0 } }
+	locator = { name = "small_gun_02" position = { 37.4 0 -8.25 } rotation = { 0 0 0 } }
+	locator = { name = "small_gun_03" position = { 0 38.02 -7.78 } rotation = { 0 0 0 } }
+	locator = { name = "small_gun_04" position = { 0 -30.8 -14.34 } rotation = { 0 0 0 } }
+}
+
+entity = {
+	name = "swarm_01_leviathan_mid_entity"
+	pdxmesh = "empty_mesh"
+	
+	locator = { name = "large_gun_01" position = { 0 0 -35.75 } rotation = { 0 0 0 } }
+	locator = { name = "large_gun_02" position = { 0 22 -16.115 } rotation = { 0 0 0 } }
+	locator = { name = "large_gun_03" position = { 0 70 -7.5 } rotation = { 0 0 0 } }
+	locator = { name = "medium_gun_01" position = { -22 27.5 -12.1 } rotation = { 0 0 0 } }
+	locator = { name = "medium_gun_02" position = { 24.75 26 -9.76 } rotation = { 0 0 0 } }
+	locator = { name = "medium_gun_03" position = { -27.5 -22.41 -9.71 } rotation = { 0 0 0 } }
+	locator = { name = "medium_gun_04" position = { 27.5 -23.1 -9.25 } rotation = { 0 0 0 } }
+	locator = { name = "small_gun_01" position = { -38.72 0 -6.325 } rotation = { 0 0 0 } }
+	locator = { name = "small_gun_02" position = { 37.4 0 -8.25 } rotation = { 0 0 0 } }
+	locator = { name = "small_gun_03" position = { 0 38.02 -7.78 } rotation = { 0 0 0 } }
+	locator = { name = "small_gun_04" position = { 0 -30.8 -14.34 } rotation = { 0 0 0 } }
+}
+
+entity = {
+	name = "swarm_01_leviathan_stern_entity"
+	pdxmesh = "empty_mesh"
+	
+	locator = { name = "large_gun_01" position = { 0 0 -35.75 } rotation = { 0 0 0 } }
+	locator = { name = "large_gun_02" position = { 0 22 -16.115 } rotation = { 0 0 0 } }
+	locator = { name = "large_gun_03" position = { 0 70 -7.5 } rotation = { 0 0 0 } }
+	locator = { name = "medium_gun_01" position = { -22 27.5 -12.1 } rotation = { 0 0 0 } }
+	locator = { name = "medium_gun_02" position = { 24.75 26 -9.76 } rotation = { 0 0 0 } }
+	locator = { name = "medium_gun_03" position = { -27.5 -22.41 -9.71 } rotation = { 0 0 0 } }
+	locator = { name = "medium_gun_04" position = { 27.5 -23.1 -9.25 } rotation = { 0 0 0 } }
+	locator = { name = "small_gun_01" position = { -38.72 0 -6.325 } rotation = { 0 0 0 } }
+	locator = { name = "small_gun_02" position = { 37.4 0 -8.25 } rotation = { 0 0 0 } }
+	locator = { name = "small_gun_03" position = { 0 38.02 -7.78 } rotation = { 0 0 0 } }
+	locator = { name = "small_gun_04" position = { 0 -30.8 -14.34 } rotation = { 0 0 0 } }
+}

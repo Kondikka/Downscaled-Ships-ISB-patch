@@ -1,0 +1,43 @@
+@exd_bloom_factor = 1
+
+entity = {
+	name = "unbidden_02_sun_crusher_entity"
+	pdxmesh = "extra_dimensional_01_ship_frame_mesh"
+	
+	default_state = "idle"
+	state = { name = "idle"			animation = "idle" }
+	state = { name = "moving"		animation = "idle" }
+	state = { name = "death"		animation = "death" }
+}
+
+entity = {
+	name = "unbidden_02_sun_crusher_ship_entity"
+	pdxmesh = "extra_dimensional_01_civilian_mesh"
+	scale = 0.4
+	
+	locator = { name = "part1" }
+	
+	default_state = "idle"
+	state = { name = "idle"		state_time = 5
+		event = { time = 0 particle = "extra_dimensional_large_green_ship_effect"	keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "engine_medium_01" particle = "extradimensional_01_green_exhaust_idle"	keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "engine_medium_02" particle = "extradimensional_01_green_exhaust_idle"	keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "engine_medium_03" particle = "extradimensional_01_green_exhaust_idle"	keep_particle = yes trigger_once = yes }
+		start_event = { trigger_once = yes sound = { soundeffect = "ex_starship_hum" } }
+	}
+	state = { name = "moving"		state_time = 5
+		event = { time = 0 particle = "extra_dimensional_large_green_ship_effect"	keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "engine_medium_01" particle = "extradimensional_01_green_exhaust_moving"	keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "engine_medium_02" particle = "extradimensional_01_green_exhaust_moving"	keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "engine_medium_03" particle = "extradimensional_01_green_exhaust_moving"	keep_particle = yes trigger_once = yes }
+	}
+	state = { name = "death"		state_time = 5 
+		event = { time = 0 node = "root" particle = "ed_green_large_dissolve_effect"	keep_particle = yes trigger_once = yes }
+	}
+	
+	game_data = {
+		uv_animation_speed 		= 0.2
+		uv_animation_direction 	= { 0.0 0.09 }
+		bloom_factor = @exd_bloom_factor
+	}
+}

@@ -1,0 +1,93 @@
+@titan_scale = 36.0
+
+#FRAME
+entity = {
+	name = "swarm_01_titan_entity"
+	pdxmesh = "empty_mesh"
+	
+	scale = 1.25
+	
+	locator = { name = "part1" }
+	locator = { name = "part2" }
+	locator = { name = "part3" }
+	locator = { name = "part4" }
+	
+	locator = { name = "part5"	position = { 0 0 0 } rotation = { 0 -90 0 } }
+	locator = { name = "part6"	position = { 32.5 30 -5 } rotation = { 0 0 0 } }
+	locator = { name = "part7"	position = { -32.5 30 -5 } rotation = { 0 0 0 } }
+	locator = { name = "part8"	position = { 55 -10 -20 } rotation = { 0 0 0 } }
+	locator = { name = "part9"	position = { -55 -10 -20 } rotation = { 0 0 0 } }
+	attach = { part5 = "swarm_01_Superdreadnought_main_entity" }
+	attach = { part6 = "swarm_superdreadnought_baby_entity" }
+	attach = { part7 = "swarm_superdreadnought_baby_entity" }
+	attach = { part8 = "swarm_superdreadnought_baby_entity" }
+	attach = { part9 = "swarm_superdreadnought_baby_entity" }
+}
+
+
+# BOW
+entity = {
+	name = "swarm_01_titan_bow_entity"
+	pdxmesh = "empty_mesh"
+	
+	locator = { name = "large_gun_01" position = { 0 0 -63 } rotation = { 0 0 0 } }
+	locator = { name = "large_gun_02" position = { 15 0 -34.5 } rotation = { 0 0 0 } }
+	locator = { name = "large_gun_03" position = { -15 0 -34.5 } rotation = { 0 0 0 } }	
+	locator = { name = "large_gun_04" position = { 15 0 -34.5 } rotation = { 0 0 0 } }
+	locator = { name = "large_gun_05" position = { -15 0 -34.5 } rotation = { 0 0 0 } }	
+	locator = { name = "medium_gun_01" position = { 32.5 30 -17.5 } rotation = { 0 0 0 } }
+	locator = { name = "medium_gun_02" position = { -32.5 30 -17.5 } rotation = { 0 0 0 } }
+	locator = { name = "medium_gun_03" position = { 55 -10 -32.5 } rotation = { 0 0 0 } }
+	locator = { name = "medium_gun_04" position = { -55 -10 -32.5 } rotation = { 0 0 0 } }
+	locator = { name = "small_gun_01" position = { 0 21.39 -8.52 } rotation = { 0 0 0 } }
+	locator = { name = "small_gun_02" position = { 0 -21.39 -8.52 } rotation = { 0 0 0 } }
+	locator = { name = "small_gun_03" position = { 15.54 0 -29.7 } rotation = { 0 0 0 } }
+	locator = { name = "small_gun_04" position = { -15.54 0 -29.7 } rotation = { 0 0 0 } }
+}
+
+
+# MID
+
+entity = {
+	name = "swarm_01_titan_mid_entity"
+	pdxmesh = "empty_mesh"
+	
+	locator = { name = "large_gun_01" position = { 0 0 -63 } rotation = { 0 0 0 } }
+	locator = { name = "large_gun_02" position = { 15 0 -34.5 } rotation = { 0 0 0 } }
+	locator = { name = "large_gun_03" position = { -15 0 -34.5 } rotation = { 0 0 0 } }	
+	locator = { name = "medium_gun_01" position = { 32.5 30 -17.5 } rotation = { 0 0 0 } }
+	locator = { name = "medium_gun_02" position = { -32.5 30 -17.5 } rotation = { 0 0 0 } }
+	locator = { name = "medium_gun_03" position = { 55 -10 -32.5 } rotation = { 0 0 0 } }
+	locator = { name = "medium_gun_04" position = { -55 -10 -32.5 } rotation = { 0 0 0 } }
+	locator = { name = "small_gun_01" position = { 0 21.39 -8.52 } rotation = { 0 0 0 } }
+	locator = { name = "small_gun_02" position = { 0 -21.39 -8.52 } rotation = { 0 0 0 } }
+	locator = { name = "small_gun_03" position = { 15.54 0 -29.7 } rotation = { 0 0 0 } }
+	locator = { name = "small_gun_04" position = { -15.54 0 -29.7 } rotation = { 0 0 0 } }
+	
+	locator = { name = "strike_craft_locator_01" position = { 0 30 -30 } rotation = { 0 0 0 } }
+	locator = { name = "strike_craft_locator_02" position = { 0 30 -30 } rotation = { 0 0 0 } }
+	locator = { name = "strike_craft_locator_03" position = { 0 -30 -30 } rotation = { 0 0 0 } }
+	locator = { name = "strike_craft_locator_04" position = { 0 -30 -30 } rotation = { 0 0 0 } }
+}
+
+
+
+# STERN
+entity = {
+	name = "swarm_01_titan_stern_entity"
+	pdxmesh = "empty_mesh"
+	
+	locator = { name = "large_gun_01" position = { 0 0 -63 } rotation = { 0 0 0 } }
+	locator = { name = "large_gun_02" position = { 15 0 -34.5 } rotation = { 0 0 0 } }
+	locator = { name = "large_gun_03" position = { -15 0 -34.5 } rotation = { 0 0 0 } }	
+	locator = { name = "medium_gun_01" position = { 32.5 30 -17.5 } rotation = { 0 0 0 } }
+	locator = { name = "medium_gun_02" position = { -32.5 30 -17.5 } rotation = { 0 0 0 } }
+	locator = { name = "medium_gun_03" position = { 55 -10 -32.5 } rotation = { 0 0 0 } }
+	locator = { name = "medium_gun_04" position = { -55 -10 -32.5 } rotation = { 0 0 0 } }
+	locator = { name = "small_gun_01" position = { 0 21.39 -8.52 } rotation = { 0 0 0 } }
+	locator = { name = "small_gun_02" position = { 0 -21.39 -8.52 } rotation = { 0 0 0 } }
+	locator = { name = "small_gun_03" position = { 15.54 0 -29.7 } rotation = { 0 0 0 } }
+	locator = { name = "small_gun_04" position = { -15.54 0 -29.7 } rotation = { 0 0 0 } }
+}
+
+

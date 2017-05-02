@@ -1,0 +1,129 @@
+entity = {
+	name = "ai_01_sun_crusher_entity"
+	pdxmesh = "molluscoid_01_corvette_frame_mesh"
+	
+	default_state = "idle"
+	state = { name = "idle"	 						animation = "idle" animation_blend_time = 0 }
+	state = { name = "moving"						animation = "idle" animation_blend_time = 2 }
+	state = { name = "working" 						animation = "idle" looping = no next_state = working_looping }
+	state = { name = "working_looping"				animation = "idle" }
+	state = { name = "death" animation = "death3" 	animation_blend_time = 0.0 chance = 1 looping = no 
+	event = { time = 4.63 node = "ship_main" particle = "large_ship_explosion_particle" sound = { soundeffect = ship_destroyed } }
+	}
+}
+
+entity = {
+	name = "ai_01_sun_crusher_ship_entity"
+	pdxmesh = "ai_01_civilian_mesh"
+	scale = 0.7
+			
+	locator = { name = "part8"	position = { 5 0 0 } rotation = { 0 0 60 } }
+	locator = { name = "part9"	position = { -5 0 0 } rotation = { 0 0 -60 } }
+	locator = { name = "part10"	position = { 0 5 0 } rotation = { 0 0 0 } }
+	locator = { name = "part11"	position = { 0 -5 0 } rotation = { 0 0 0 } }
+	attach = { part8 = "ai_01_destroyer_entity" }
+	attach = { part9 = "ai_01_destroyer_entity" }
+	attach = { part10 = "ai_01_destroyer_entity" }
+	attach = { part11 = "ai_01_destroyer_entity" }
+
+	default_state = "idle"
+	state = { name = "idle" 						animation = "idle"
+		event = { time = 0 node = "engine_medium_01" particle = "ai_01_civilian_exhaust_idle_generic_particle" trigger_once = yes keep_particle = yes }
+		start_event = { trigger_once = yes sound = { soundeffect = ai_civ_civilship } } 
+	}
+	state = { name = "moving" 						animation = "idle"
+		event = { time = 0 node = "engine_medium_01" particle = "ai_01_civilian_exhaust_moving_particle" trigger_once = yes keep_particle = yes }
+	}
+	state = { name = "working"						animation = "working"		looping = no	next_state = working_looping }
+	state = { name = "working_looping"				animation = "working_looping" 
+		# Bot 1 welding
+		event = { time = 7.06 node = "Bot_01" particle = "construction_bot_welding_effect" trigger_once = yes keep_particle = yes sound = { soundeffect = "welding_bot" } }
+		event = { time = 14.76 node = "Bot_01" particle = "construction_bot_welding_effect" trigger_once = yes keep_particle = yes sound = { soundeffect = "welding_bot" } }
+		event = { time = 22.56 node = "Bot_01" particle = "construction_bot_welding_effect" trigger_once = yes keep_particle = yes sound = { soundeffect = "welding_bot" }  }
+		event = { time = 29.96 node = "Bot_01" particle = "construction_bot_welding_effect" trigger_once = yes keep_particle = yes sound = { soundeffect = "welding_bot" } }
+		event = { time = 37.3 node = "Bot_01" particle = "construction_bot_welding_effect" trigger_once = yes keep_particle = yes sound = { soundeffect = "welding_bot" } }
+			
+		# Bot 2 welding
+		event = { time = 4.3 node = "Bot_02" particle = "construction_bot_welding_effect" trigger_once = yes keep_particle = yes sound = { soundeffect = "welding_bot" } }
+		event = { time = 11.26 node = "Bot_02" particle = "construction_bot_welding_effect" trigger_once = yes keep_particle = yes sound = { soundeffect = "welding_bot" } }
+		event = { time = 17.9 node = "Bot_02" particle = "construction_bot_welding_effect" trigger_once = yes keep_particle = yes sound = { soundeffect = "welding_bot" } }
+		event = { time = 25.16 node = "Bot_02" particle = "construction_bot_welding_effect" trigger_once = yes keep_particle = yes sound = { soundeffect = "welding_bot" } }
+		event = { time = 32.5 node = "Bot_02" particle = "construction_bot_welding_effect" trigger_once = yes keep_particle = yes sound = { soundeffect = "welding_bot" } }
+		event = { time = 40.16 node = "Bot_02" particle = "construction_bot_welding_effect" trigger_once = yes keep_particle = yes sound = { soundeffect = "welding_bot" } }
+				
+		# Bot 3 welding
+		event = { time = 4.8 node = "Bot_03" particle = "construction_bot_welding_effect" trigger_once = yes keep_particle = yes sound = { soundeffect = "welding_bot" } }
+		event = { time = 11.96 node = "Bot_03" particle = "construction_bot_welding_effect" trigger_once = yes keep_particle = yes sound = { soundeffect = "welding_bot" } }
+		event = { time = 18.73 node = "Bot_03" particle = "construction_bot_welding_effect" trigger_once = yes keep_particle = yes sound = { soundeffect = "welding_bot" } }
+		event = { time = 26.3 node = "Bot_03" particle = "construction_bot_welding_effect" trigger_once = yes keep_particle = yes sound = { soundeffect = "welding_bot" } }
+		event = { time = 33.36 node = "Bot_03" particle = "construction_bot_welding_effect" trigger_once = yes keep_particle = yes sound = { soundeffect = "welding_bot" } }
+		event = { time = 40.6 node = "Bot_03" particle = "construction_bot_welding_effect" trigger_once = yes keep_particle = yes sound = { soundeffect = "welding_bot" } }
+				
+		# Bot 4 welding
+		event = { time = 6.2 node = "Bot_04" particle = "construction_bot_welding_effect" trigger_once = yes keep_particle = yes sound = { soundeffect = "welding_bot" } }
+		event = { time = 12.16 node = "Bot_04" particle = "construction_bot_welding_effect" trigger_once = yes keep_particle = yes sound = { soundeffect = "welding_bot" } }
+		event = { time = 18.4 node = "Bot_04" particle = "construction_bot_welding_effect" trigger_once = yes keep_particle = yes sound = { soundeffect = "welding_bot" } }
+		event = { time = 25.3 node = "Bot_04" particle = "construction_bot_welding_effect" trigger_once = yes keep_particle = yes sound = { soundeffect = "welding_bot" } }
+		event = { time = 32.8 node = "Bot_04" particle = "construction_bot_welding_effect" trigger_once = yes keep_particle = yes sound = { soundeffect = "welding_bot" } }
+		event = { time = 38.73 node = "Bot_04" particle = "construction_bot_welding_effect" trigger_once = yes keep_particle = yes sound = { soundeffect = "welding_bot" } }
+			
+		# Bot 5 welding
+		event = { time = 7.06 node = "Bot_05" particle = "construction_bot_welding_effect" trigger_once = yes keep_particle = yes sound = { soundeffect = "welding_bot" } }
+		event = { time = 14.76 node = "Bot_05" particle = "construction_bot_welding_effect" trigger_once = yes keep_particle = yes sound = { soundeffect = "welding_bot" } }
+		event = { time = 22.56 node = "Bot_05" particle = "construction_bot_welding_effect" trigger_once = yes keep_particle = yes sound = { soundeffect = "welding_bot" }  }
+		event = { time = 29.96 node = "Bot_05" particle = "construction_bot_welding_effect" trigger_once = yes keep_particle = yes sound = { soundeffect = "welding_bot" } }
+		event = { time = 37.3 node = "Bot_05" particle = "construction_bot_welding_effect" trigger_once = yes keep_particle = yes sound = { soundeffect = "welding_bot" } }
+				
+		# Bot 6 welding
+		event = { time = 4.3 node = "Bot_06" particle = "construction_bot_welding_effect" trigger_once = yes keep_particle = yes sound = { soundeffect = "welding_bot" } }
+		event = { time = 11.26 node = "Bot_06" particle = "construction_bot_welding_effect" trigger_once = yes keep_particle = yes sound = { soundeffect = "welding_bot" } }
+		event = { time = 17.9 node = "Bot_06" particle = "construction_bot_welding_effect" trigger_once = yes keep_particle = yes sound = { soundeffect = "welding_bot" } }
+		event = { time = 25.16 node = "Bot_06" particle = "construction_bot_welding_effect" trigger_once = yes keep_particle = yes sound = { soundeffect = "welding_bot" } }
+		event = { time = 32.5 node = "Bot_06" particle = "construction_bot_welding_effect" trigger_once = yes keep_particle = yes sound = { soundeffect = "welding_bot" } }
+		event = { time = 40.16 node = "Bot_06" particle = "construction_bot_welding_effect" trigger_once = yes keep_particle = yes sound = { soundeffect = "welding_bot" } }
+				
+		# Bot 7 welding
+		event = { time = 4.8 node = "Bot_07" particle = "construction_bot_welding_effect" trigger_once = yes keep_particle = yes sound = { soundeffect = "welding_bot" } }
+		event = { time = 11.96 node = "Bot_07" particle = "construction_bot_welding_effect" trigger_once = yes keep_particle = yes sound = { soundeffect = "welding_bot" } }
+		event = { time = 18.73 node = "Bot_07" particle = "construction_bot_welding_effect" trigger_once = yes keep_particle = yes sound = { soundeffect = "welding_bot" } }
+		event = { time = 26.3 node = "Bot_07" particle = "construction_bot_welding_effect" trigger_once = yes keep_particle = yes sound = { soundeffect = "welding_bot" } }
+		event = { time = 33.36 node = "Bot_07" particle = "construction_bot_welding_effect" trigger_once = yes keep_particle = yes sound = { soundeffect = "welding_bot" } }
+		event = { time = 40.6 node = "Bot_07" particle = "construction_bot_welding_effect" trigger_once = yes keep_particle = yes sound = { soundeffect = "welding_bot" } }
+				
+		# Bot 8 welding
+		event = { time = 6.2 node = "Bot_08" particle = "construction_bot_welding_effect" trigger_once = yes keep_particle = yes sound = { soundeffect = "welding_bot" } }
+		event = { time = 12.16 node = "Bot_08" particle = "construction_bot_welding_effect" trigger_once = yes keep_particle = yes sound = { soundeffect = "welding_bot" } }
+		event = { time = 18.4 node = "Bot_08" particle = "construction_bot_welding_effect" trigger_once = yes keep_particle = yes sound = { soundeffect = "welding_bot" } }
+		event = { time = 25.3 node = "Bot_08" particle = "construction_bot_welding_effect" trigger_once = yes keep_particle = yes sound = { soundeffect = "welding_bot" } }
+		event = { time = 32.8 node = "Bot_08" particle = "construction_bot_welding_effect" trigger_once = yes keep_particle = yes sound = { soundeffect = "welding_bot" } }
+		event = { time = 38.73 node = "Bot_08" particle = "construction_bot_welding_effect" trigger_once = yes keep_particle = yes sound = { soundeffect = "welding_bot" } }
+			
+		# Bot 9 welding
+		event = { time = 4.8 node = "Bot_09" particle = "construction_bot_welding_effect" trigger_once = yes keep_particle = yes sound = { soundeffect = "welding_bot" } }
+		event = { time = 11.96 node = "Bot_09" particle = "construction_bot_welding_effect" trigger_once = yes keep_particle = yes sound = { soundeffect = "welding_bot" } }
+		event = { time = 18.73 node = "Bot_09" particle = "construction_bot_welding_effect" trigger_once = yes keep_particle = yes sound = { soundeffect = "welding_bot" } }
+		event = { time = 26.3 node = "Bot_09" particle = "construction_bot_welding_effect" trigger_once = yes keep_particle = yes sound = { soundeffect = "welding_bot" } }
+		event = { time = 33.36 node = "Bot_09" particle = "construction_bot_welding_effect" trigger_once = yes keep_particle = yes sound = { soundeffect = "welding_bot" } }
+		event = { time = 40.6 node = "Bot_09" particle = "construction_bot_welding_effect" trigger_once = yes keep_particle = yes sound = { soundeffect = "welding_bot" } }
+				
+		# Bot 10 welding
+		event = { time = 6.2 node = "Bot_010" particle = "construction_bot_welding_effect" trigger_once = yes keep_particle = yes sound = { soundeffect = "welding_bot" } }
+		event = { time = 12.16 node = "Bot_010" particle = "construction_bot_welding_effect" trigger_once = yes keep_particle = yes sound = { soundeffect = "welding_bot" } }
+		event = { time = 18.4 node = "Bot_010" particle = "construction_bot_welding_effect" trigger_once = yes keep_particle = yes sound = { soundeffect = "welding_bot" } }
+		event = { time = 25.3 node = "Bot_010" particle = "construction_bot_welding_effect" trigger_once = yes keep_particle = yes sound = { soundeffect = "welding_bot" } }
+		event = { time = 32.8 node = "Bot_010" particle = "construction_bot_welding_effect" trigger_once = yes keep_particle = yes sound = { soundeffect = "welding_bot" } }
+		event = { time = 38.73 node = "Bot_010" particle = "construction_bot_welding_effect" trigger_once = yes keep_particle = yes sound = { soundeffect = "welding_bot" } }
+	}
+	state = { name = "death"							animation = "idle" looping = no
+		event = { time = 0.0 node = "construction_explosion_locator1" particle = "ship_explosion_particle" sound = { soundeffect = ship_destroyed } }
+		event = { time = 1.4 node = "construction_explosion_locator3" particle = "ship_explosion_particle" sound = { soundeffect = ship_destroyed } }
+		event = { time = 1.0 node = "construction_explosion_locator2" particle = "ship_explosion_particle" sound = { soundeffect = ship_destroyed } }
+		event = { time = 1.6 node = "construction_explosion_locator6" particle = "ship_explosion_particle" sound = { soundeffect = ship_destroyed } }
+		event = { time = 1.9 node = "construction_explosion_locator5" particle = "ship_explosion_particle" sound = { soundeffect = ship_destroyed } }
+		event = { time = 2.1 node = "construction_explosion_locator4" particle = "ship_explosion_particle" sound = { soundeffect = ship_destroyed } }
+		event = { time = 2.83 node = "construction_explosion_locator7" particle = "ship_explosion_particle" sound = { soundeffect = ship_destroyed } }
+		event = { time = 3.26 node = "construction_explosion_locator9" particle = "ship_explosion_particle" sound = { soundeffect = ship_destroyed } }
+		event = { time = 3.9 node = "construction_explosion_locator8" particle = "ship_explosion_particle" sound = { soundeffect = ship_destroyed } }
+		event = { time = 4.1 node = "construction_explosion_locator10" particle = "ship_explosion_particle" sound = { soundeffect = ship_destroyed } }
+	}
+}
